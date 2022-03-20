@@ -1,0 +1,680 @@
+/*
+1. Posicionamiento
+2. modelo de caja
+3. Tipografia
+4. Visuales
+5. Otros
+*/
+ :root {
+    /*Colores*/
+    --violeta-principal:#4f2c99;
+    --shit-color: #7643E6;  
+    --soft-orange: #7643E6;
+    --secondary-blue: #7643E6;
+    --soft-blue: #faf8f7;
+    --warm-back: #201e1c;
+    --black: #363430;
+    --grey: #faf8f7;
+    --off-white: #faf8f7;
+    --just_white: #fff ;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+p {
+    font-size: 2rem;
+}
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+    min-width: 320px;
+    height: 500px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--violeta-principal) 30%, #201E1C 100%);
+}
+
+.header--nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 5px;
+    background-color: var(--violeta-principal);
+}
+
+.iconored {
+    place-self: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+    filter: invert(21%) sepia(96%) saturate(2778%) hue-rotate(252deg) brightness(97%) contrast(85%);
+}   
+.iconored img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.header--img {
+    display: flex;
+    place-self: center;
+    display: block;
+    font-size: 5rem;
+    align-self: center;
+    color: var(--just_white);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header--title-container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 200px;
+    text-align: center;
+    align-self: center;
+
+}
+.header--title-container h1{
+    margin-top: 30px;
+    font-size:2.4rem;
+    font-weight:bold;
+    line-height: 2.6rem ;
+    color: var(--just_white);
+}
+.header--title-container p {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    font-weight: 500px;
+    line-height: 1.8rem;
+    color:var (var(--soft-orange))
+}
+.header--title-container .text{
+    display: inline-block;
+    border: 200px;
+    margin-top: 60px;
+    color: var(--grey);
+}
+
+.header--title-container .header--button {
+    display: block;
+    position: absolute;
+    left: calc(50% - 120px);
+    top: 270px;
+    margin-top: 206px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    color: var(--off-white);
+    background-color: var(--soft-orange);
+
+    /*sombra*/
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration:none;
+    color: var (--black);
+}
+.header--button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('../assets/icons/downarrow.svg');
+}
+
+main {
+    width: 100%;
+    height:auto;
+    background-color: var(--warm-back);
+}
+.main-news-section {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: var(--grey);
+}
+
+.main-news-section--title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+    /*con este margin se posiciona el contenedor en el medio*/
+}
+
+
+.main-news-section h2 {
+    margin: 30px 0px 30px 0px;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 2.6rem ;
+    color: var(--just_white)
+}
+
+.main-news-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px 50px 100px;
+}
+
+.main-news-card_destacada {
+    display: flex;
+    align-items: flex-end;
+    min-width: 700px;
+    min-height: 600px;
+    background-image: url("https://cdn.decrypt.co/resize/1536/wp-content/uploads/2021/02/metamask-cropped-gID_2.png.webp");
+    background-size: cover;
+    border-radius: 15px;
+    
+}
+
+.main-news-card_nodestacadas {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.main-news-card1 {
+    display: flex;
+    align-items: flex-end;
+    min-width: 325px;
+    min-height: 325px;
+    background-image: url("https://cdn.decrypt.co/resize/1200/wp-content/uploads/2020/11/paypal-crypto-bitcoin-payments-gID_4.jpg.webp");
+    background-size: cover;
+    border-radius: 15px;
+
+}
+.main-news-card2 {
+    display: flex;
+    align-items: flex-end;
+    min-width: 325px;
+    min-height: 325px;
+    background-image: url("https://cdn.decrypt.co/resize/1200/wp-content/uploads/2021/12/bitcoin-pirates-gID_6.jpg.webp");
+    background-size: cover;
+    border-radius: 15px;
+    
+
+}
+.main-news-card3 {
+    display: flex;
+    align-items: flex-end;
+    min-width: 325px;
+    min-height: 325px;
+    background-image: url("https://cdn.decrypt.co/resize/1200/wp-content/uploads/2021/12/Ethereum_upgrade-node-gID_1.jpeg.webp");
+    background-size: cover;
+    border-radius: 15px;
+
+}
+.main-news-card4 {
+    display: flex;
+    align-items: flex-end;
+    min-width: 325px;
+    min-height: 325px;
+    background-image: url("https://cdn.decrypt.co/resize/1200/wp-content/uploads/2021/11/Fold-AR-Experience-gID_4.png.webp");
+    background-size: cover;
+    border-radius: 15px;
+
+}
+.main-news-cards_text {
+    align-items: flex-end;
+    text-align: start;
+    justify-content: end;
+    width: 500px;
+    padding: 25px;
+    color: var(--off-white);
+
+}
+.main-news-cards_text h3{
+    line-height: 25px;
+    padding: 15px 15px 15px 15px;
+    background-color: rgba(0,0,0,0.5);
+}
+.main-news-cards_text p{
+    line-height: 20px;
+    padding: 0px 15px 15px 15px;
+    background-color: rgba(0,0,0,0.5);
+    }
+
+/*******************************************************/
+/*---------------       Table      --------------------*/
+/*******************************************************/
+.main-tables-gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 50px 100px;
+}
+
+.main-tables-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-tables-container_left,
+.main-tables-container_right {
+    justify-content: center;
+    width: 650px;
+    height: 500px;
+}
+
+.main-currency-table {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+.main-currency-table .currency-table--title{
+    margin-top: 59px;
+    margin-bottom:  15px;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--soft-orange);
+    
+}
+
+.main-currency-table .currency-table--title h2 {
+    font-size: 3rem !important;
+}
+
+.currency-table--container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 230px;
+    height: 580px;
+    margin: 0 auto;
+}
+.main-news-section .currency-table--container p {
+    font-size: 2.5rem !important;
+}
+
+.currency-table--container table{
+    width: 70%;
+    height:  70%;
+}
+
+.currency-table--container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500px;
+    line-height: 1.9rem;
+    color: var(--black);
+    background-color: var(--just_white) ;
+}
+.currency-table--container .table__top-left{
+    border-radius: 15px 0 0 0 ;
+}
+.currency-table--container .table__top-right{
+    border-radius: 0 15px 0 0;
+}
+.currency-table--container .table__bottom-left {
+    border-radius: 0 0 15px 0;
+}
+.currency-table--container .table__bottom-right {
+    border-radius: 0 0 0 15px;
+}
+.currency-table--container .table__right {
+    font-size: 1.4rem;
+    font-weight: normal;/*grosor de fuente*/
+    line-height: 1.7rem;
+    color: var(--black);
+}
+
+.currency-table--container .down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../assets/icons/trending-down.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.currency-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("../assets/icons/trending-up.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--date {
+    align-items: center;
+    width: 286px;
+    height: 32px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+.currency-table--date p{
+    line-height: 1.5rem;
+    color: var(--warm-back);
+    font-weight: 300;
+}
+
+.main-tables-container .comision-table--title{
+    
+    margin-bottom:  15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    width: 100%;
+}
+/*******************************************************/
+/*---------------       Product      ------------------*/
+/*******************************************************/
+
+.main-product-detail{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding:  50px 100px;
+    background-color:var(--warm-back);
+
+}
+
+.product-detail--title{
+    width: 90%;
+    min-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.product-detail--title h2{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color:var(--just_white);
+}
+.product-detail--title p {
+margin-bottom: 20px;
+font-size: 2rem;
+font-weight: 500;
+line-height: 1.8rem;
+color:var(--grey);
+}
+
+.product-cards--container {
+    justify-content: center;
+    align-items: center;
+}
+
+.product-detail--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+}   
+.product-detail--card p{
+    font-size: 2rem;
+}
+.product-detail--card .analitic{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    background-image:  url("../assets/icons/analitic.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-detail--card .alert{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-image:  url("../assets/icons/alert.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-detail--card .discord{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-image:  url("../assets/icons/discord.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-detail--card .check{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-image:  url("../assets/icons/check-circle.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product--card-title{
+    margin-bottom:  15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just_white);
+}
+.product--card-body{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--grey);
+}
+
+/*******************************************************/
+/*-----------------       Plans      ------------------*/
+/*******************************************************/
+
+.bitcoin-img-container {
+    display: grid;
+    position: relative;
+    align-items: center;
+    width:100%;
+    height: 500px;
+    margin: 150px 0px 75px 0px;
+    min-width: 320px;
+    background-image: url("../assets/img/pexels-worldspectrum-843700.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.bitcoin-img-container h2 {
+    justify-content: center;
+    font-weight: bold;
+    line-height: 3.6rem;
+    color: var(--just_white);
+}
+
+.main-plans-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 320px;
+    text-align: center;
+    padding: 0px 250px 70px 250px;
+}
+.plans--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    
+}
+.plans--title h2{
+    padding-top: 20px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just_white);
+}
+.plans--title p{
+    padding-top: 10px;
+    font-size: 2.4rem;
+    font-weight: 1.8rem;
+    color:var(--grey);
+}
+.plans-container--card{
+    position: relative;
+    justify-content: center;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 290px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 25px;
+    background-color: var(--just_white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+}
+
+.plans-container--slider{
+    justify-content: center;
+    display: flex;
+    height: 316px;
+    
+} 
+.Recommended{
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    font-size: 1.2rem;
+    padding:6px;
+    top: -15px;
+    left: calc(50% - 60px);
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+    color: var(--just_white);
+}
+.plan-card--title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:black;
+}
+.plan-card--price{
+    padding: 5px 0;
+    font-size: 5.3rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: var(--warm-back);
+
+}
+.plan-card--price span{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.plan-card--saving{
+    font-size:1.2rem ;
+    color:var(--warm-back);
+}
+.plan-card--ca {
+    justify-content: center;
+    width: 150px ;
+    height: 48px;
+    margin-top: 20px;
+    background-color:var(--violeta-principal);
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: "DM Sans" , sans-serif;
+    line-height: 1.8rem;
+    color: var(--off-white);
+}
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/icons/swapshitylogo.svg");
+    vertical-align: text-bottom;
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    width: 100%;
+    height: 210px;
+    background-color: var(--violeta-principal);
+}
+footer strong {
+    font-size: 2.2rem;
+}
+
+footer section {  
+    align-self: center;
+    width: 50%;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.left li {
+    margin: 10px 0px;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--just_white)
+}
+
+footer h1{
+    font-size: 4rem !important;
+}
