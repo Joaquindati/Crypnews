@@ -114,12 +114,12 @@
         text-align: center;
     }
     footer h1{
-        font-size: 3rem !important;
+        font-size: 2.3rem !important;
     }
 
 @media (max-width:500px) {
     body h1{
-        font-size: 5rem;
+        font-size: 6rem;
     }
     .main-tables-gridcontainer {
         display: grid;
